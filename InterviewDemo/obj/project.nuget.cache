@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "LGyZo2VpaUEoptgx4T2clLSuOpKVSxsDQ591qQop3DV+uoLB+wooEMq8PqNewrN9SQ3iamWJTI2l6VCnwofn4Q==",
+  "success": true,
+  "projectFilePath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.cudirect.com/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
