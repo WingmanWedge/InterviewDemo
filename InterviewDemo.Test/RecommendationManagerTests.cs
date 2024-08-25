@@ -171,20 +171,39 @@ namespace InterviewDemo.Test
             _testViewer.BirthDate = DateTime.Today - TimeSpan.FromDays(365 * 12);
 
             // add a movie inappropriate for this user
-            movieRepo.AddMovie(new Movie
+            movieRepo.AddMany(new List<Movie>
             {
-                Name = "R-Rated Movie",
-                Genre = "Action",
-                ReleaseDate = default,
-                Rating = MPAARating.R,
-                FeatureStartDate = null
+                new Movie
+                {
+                    Name = "R-Rated Movie",
+                    Genre = "Action",
+                    ReleaseDate = default,
+                    Rating = MPAARating.R,
+                    FeatureStartDate = null
+                },
+                new Movie
+                {
+                    Name = "Adult Movie",
+                    Genre = "Action",
+                    ReleaseDate = default,
+                    Rating = MPAARating.NC17,
+                    FeatureStartDate = null
+                },
+                new Movie
+                {
+                    Name = "Older Kids Movice",
+                    Genre = "Action",
+                    ReleaseDate = default,
+                    Rating = MPAARating.PG13,
+                    FeatureStartDate = null
+                }
             });
-
-
+            
             // act select movies
             var testMovieList = _testRecommendationManager.GetRecommendations(_testViewer);
+            
             // assert: check that no PG-13, R, or NC-17 are returned
-            var count = testMovieList.Count(m => m.Rating == MPAARating.R);
+            var count = testMovieList.Count(m => m.Rating == MPAARating.R || m.Rating == MPAARating.NC17 || m.Rating == MPAARating.PG13);
             Assert.IsTrue(count == 0);
         }
 
