@@ -44,7 +44,19 @@ namespace InterviewDemo
 			recommendations.Add(featuredRecs);
 
 
-			return recommendations;
+			var maxAllowedRating = GetMaxAllowedRating(user.BirthDate);
+			
+			_logger.LogInformation("Information");
+			return recommendations.Where(m => m.Rating <= maxAllowedRating).DistinctBy(m => m.Name).ToList();
+		}
+
+		private MPAARating GetMaxAllowedRating(DateTime viewerBirthDate)
+		{
+			var yearsOld = DateTime.Today.Year - viewerBirthDate.Year;
+			var ratingsYears = Enum.GetValues(typeof(MPAARating)).Cast<int>();
+			
+			var maxAllowedRating = ratingsYears.Last(r => r <= yearsOld);
+			return (MPAARating)maxAllowedRating;
 		}
 
 		private Movie GetFeatureRecommendation()
@@ -55,7 +67,7 @@ namespace InterviewDemo
 		private List<Movie> GetGenreRecommendations(List<Movie> userViewingHistory)
 		{
 			var eligibleMovies = userViewingHistory.Select(m => m.Genre).Distinct().ToList();
-			return _movieRepository.GetActive().Where(m => eligibleMovies.Contains(m.Genre)).Distinct().ToList();
+			return _movieRepository.GetActive().Where(m => eligibleMovies.Contains(m.Genre)).DistinctBy(m => m.Name).ToList();
 		}
 	}
 }
