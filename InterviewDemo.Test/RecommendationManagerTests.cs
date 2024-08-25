@@ -91,37 +91,6 @@ namespace InterviewDemo.Test
         [TestMethod]
         public void GetRecommendations_OnlyIncludesIfGenreWasVeiwed()
         {
-            //arrange
-            var viewedMovies = new List<Movie>
-            {
-                new Movie
-                {
-                    Name = "FunnyOne",
-                    FeatureStartDate = new DateTime(2024, 8, 21),
-                    Rating = MPAARating.PG,
-                    Genre = "Comedy",
-                    ReleaseDate = new DateTime(2024, 8, 15)
-                },
-                new Movie
-                {
-                    Name = "ExcitingOne",
-                    FeatureStartDate = new DateTime(2024, 8, 21),
-                    Rating = MPAARating.PG,
-                    Genre = "Action",
-                    ReleaseDate = new DateTime(2024, 8, 15)
-                },
-                new Movie
-                {
-                    Name = "SadOne",
-                    FeatureStartDate = new DateTime(2024, 8, 21),
-                    Rating = MPAARating.PG,
-                    Genre = "Romance",
-                    ReleaseDate = new DateTime(2024, 8, 15)
-                }
-            };
-
-            _testViewer.ViewingHistory = viewedMovies;
-
             //act
             var testMovieList = _testRecommendationManager.GetRecommendations(_testViewer);
 
@@ -141,14 +110,14 @@ namespace InterviewDemo.Test
                     Name = "Highlander",
                     Genre = "Action",
                     ReleaseDate = default,
-                    Rating = MPAARating.G
+                    Rating = MPAARating.R
                 },
                 new Movie
                 {
                     Name = "Highlander",
                     Genre = "Action",
                     ReleaseDate = default,
-                    Rating = MPAARating.G
+                    Rating = MPAARating.R
                 }
             });
 
