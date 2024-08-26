@@ -369,19 +369,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\": {}
+    "C:\\Users\\morga\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
+      "projectUniqueName": "C:\\Users\\morga\\Downloads\\InterviewDemo-mbaker\\InterviewDemo-mbaker\\InterviewDemo\\InterviewDemo.csproj",
       "projectName": "InterviewDemo",
-      "projectPath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
-      "packagesPath": "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\",
-      "outputPath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\obj\\",
+      "projectPath": "C:\\Users\\morga\\Downloads\\InterviewDemo-mbaker\\InterviewDemo-mbaker\\InterviewDemo\\InterviewDemo.csproj",
+      "packagesPath": "C:\\Users\\morga\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\morga\\Downloads\\InterviewDemo-mbaker\\InterviewDemo-mbaker\\InterviewDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Anthony.Ornelas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\morga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -389,10 +389,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.cudirect.com/nuget": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/cudirect/_packaging/Common/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/cudirect/_packaging/Shared/nuget/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
@@ -436,16 +434,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.cudirect.com/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  }
 }
