@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {}
+    "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {}
   },
   "projects": {
-    "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {
+    "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
+        "projectUniqueName": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
         "projectName": "InterviewDemo",
-        "projectPath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
+        "projectPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
         "packagesPath": "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\",
-        "outputPath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\obj\\",
+        "outputPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anthony.Ornelas\\AppData\\Roaming\\NuGet\\NuGet.Config",
