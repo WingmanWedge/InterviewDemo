@@ -8,7 +8,7 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
-      "Microsoft.CodeCoverage/17.8.0": {
+      "Microsoft.CodeCoverage/17.11.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
@@ -132,11 +132,11 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.NET.Test.Sdk/17.8.0": {
+      "Microsoft.NET.Test.Sdk/17.11.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.8.0",
-          "Microsoft.TestPlatform.TestHost": "17.8.0"
+          "Microsoft.CodeCoverage": "17.11.0",
+          "Microsoft.TestPlatform.TestHost": "17.11.0"
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {}
@@ -152,10 +152,9 @@
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/17.8.0": {
+      "Microsoft.TestPlatform.ObjectModel/17.11.0": {
         "type": "package",
         "dependencies": {
-          "NuGet.Frameworks": "6.5.0",
           "System.Reflection.Metadata": "1.6.0"
         },
         "compile": {
@@ -249,10 +248,10 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/17.8.0": {
+      "Microsoft.TestPlatform.TestHost/17.11.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "17.8.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.11.0",
           "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
@@ -479,15 +478,6 @@
           }
         }
       },
-      "NuGet.Frameworks/6.5.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
-        }
-      },
       "System.Reflection.Metadata/1.6.0": {
         "type": "package",
         "compile": {
@@ -570,15 +560,14 @@
         "coverlet.collector.nuspec"
       ]
     },
-    "Microsoft.CodeCoverage/17.8.0": {
-      "sha512": "KC8SXWbGIdoFVdlxKk9WHccm0llm9HypcHMLUUFabRiTS3SO2fQXNZfdiF3qkEdTJhbRrxhdRxjL4jbtwPq4Ew==",
+    "Microsoft.CodeCoverage/17.11.0": {
+      "sha512": "QKcOSuw7MZG4XiQ+pCj+Ib6amOwoRDEO7e3DbxqXeOPXSnfyGXYoZQI8I140s1mKQVn1Vh+c5WlKvCvlgMovpg==",
       "type": "package",
-      "path": "microsoft.codecoverage/17.8.0",
+      "path": "microsoft.codecoverage/17.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE_MIT.txt",
         "ThirdPartyNotices.txt",
         "build/netstandard2.0/CodeCoverage/CodeCoverage.config",
         "build/netstandard2.0/CodeCoverage/CodeCoverage.exe",
@@ -607,6 +596,7 @@
         "build/netstandard2.0/InstrumentationEngine/x64/MicrosoftInstrumentationEngine_x64.dll",
         "build/netstandard2.0/InstrumentationEngine/x86/MicrosoftInstrumentationEngine_x86.dll",
         "build/netstandard2.0/Microsoft.CodeCoverage.Core.dll",
+        "build/netstandard2.0/Microsoft.CodeCoverage.Instrumentation.Core.dll",
         "build/netstandard2.0/Microsoft.CodeCoverage.Instrumentation.dll",
         "build/netstandard2.0/Microsoft.CodeCoverage.Interprocess.dll",
         "build/netstandard2.0/Microsoft.CodeCoverage.props",
@@ -632,7 +622,7 @@
         "build/netstandard2.0/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
         "lib/net462/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
-        "microsoft.codecoverage.17.8.0.nupkg.sha512",
+        "microsoft.codecoverage.17.11.0.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
       ]
     },
@@ -882,15 +872,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.NET.Test.Sdk/17.8.0": {
-      "sha512": "BmTYGbD/YuDHmApIENdoyN1jCk0Rj1fJB0+B/fVekyTdVidr91IlzhqzytiUgaEAzL1ZJcYCme0MeBMYvJVzvw==",
+    "Microsoft.NET.Test.Sdk/17.11.0": {
+      "sha512": "fH7P0LihMXgnlNLtrXGetHd30aQcD+YrSbWXbCPBnrypdRApPgNqd/TgncTlSVY1bbLYdnvpBgts2dcnK37GzA==",
       "type": "package",
-      "path": "microsoft.net.test.sdk/17.8.0",
+      "path": "microsoft.net.test.sdk/17.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE_MIT.txt",
         "build/net462/Microsoft.NET.Test.Sdk.props",
         "build/net462/Microsoft.NET.Test.Sdk.targets",
         "build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs",
@@ -901,19 +890,18 @@
         "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
         "lib/net462/_._",
         "lib/netcoreapp3.1/_._",
-        "microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+        "microsoft.net.test.sdk.17.11.0.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.ObjectModel/17.8.0": {
-      "sha512": "AYy6vlpGMfz5kOFq99L93RGbqftW/8eQTqjT9iGXW6s9MRP3UdtY8idJ8rJcjeSja8A18IhIro5YnH3uv1nz4g==",
+    "Microsoft.TestPlatform.ObjectModel/17.11.0": {
+      "sha512": "PU+CC1yRzbR0IllrtdILaeep7WP5OIrvmWrvCMqG3jB1h4F6Ur7CYHl6ENbDVXPzEvygXh0GWbTyrbjfvgTpAg==",
       "type": "package",
-      "path": "microsoft.testplatform.objectmodel/17.8.0",
+      "path": "microsoft.testplatform.objectmodel/17.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE_MIT.txt",
         "lib/net462/Microsoft.TestPlatform.CoreUtilities.dll",
         "lib/net462/Microsoft.TestPlatform.PlatformAbstractions.dll",
         "lib/net462/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
@@ -1001,19 +989,18 @@
         "lib/netstandard2.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+        "microsoft.testplatform.objectmodel.17.11.0.nupkg.sha512",
         "microsoft.testplatform.objectmodel.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.TestHost/17.8.0": {
-      "sha512": "9ivcl/7SGRmOT0YYrHQGohWiT5YCpkmy/UEzldfVisLm6QxbLaK3FAJqZXI34rnRLmqqDCeMQxKINwmKwAPiDw==",
+    "Microsoft.TestPlatform.TestHost/17.11.0": {
+      "sha512": "KMzJO3dm3+9W8JRQ3IDviu0v7uXP5Lgii6TuxMc5m8ynaqcGnn7Y18cMb5AsP2xp59uUHO474WZrssxBdb8ZxQ==",
       "type": "package",
-      "path": "microsoft.testplatform.testhost/17.8.0",
+      "path": "microsoft.testplatform.testhost/17.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE_MIT.txt",
         "ThirdPartyNotices.txt",
         "build/netcoreapp3.1/Microsoft.TestPlatform.TestHost.props",
         "build/netcoreapp3.1/x64/testhost.dll",
@@ -1071,7 +1058,7 @@
         "lib/netcoreapp3.1/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
         "lib/netcoreapp3.1/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
         "lib/netcoreapp3.1/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
-        "microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+        "microsoft.testplatform.testhost.17.11.0.nupkg.sha512",
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
@@ -1321,21 +1308,6 @@
         "packageIcon.png"
       ]
     },
-    "NuGet.Frameworks/6.5.0": {
-      "sha512": "QWINE2x3MbTODsWT1Gh71GaGb5icBz4chS8VYvTgsBnsi8esgN6wtHhydd7fvToWECYGq7T4cgBBDiKD/363fg==",
-      "type": "package",
-      "path": "nuget.frameworks/6.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "icon.png",
-        "lib/net472/NuGet.Frameworks.dll",
-        "lib/netstandard2.0/NuGet.Frameworks.dll",
-        "nuget.frameworks.6.5.0.nupkg.sha512",
-        "nuget.frameworks.nuspec"
-      ]
-    },
     "System.Reflection.Metadata/1.6.0": {
       "sha512": "COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "type": "package",
@@ -1368,24 +1340,29 @@
       "InterviewDemo >= 1.0.0",
       "MSTest.TestAdapter >= 3.1.1",
       "MSTest.TestFramework >= 3.1.1",
-      "Microsoft.NET.Test.Sdk >= 17.8.0",
+      "Microsoft.NET.Test.Sdk >= 17.11.0",
       "coverlet.collector >= 6.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\": {}
+    "C:\\Users\\sta11\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
+      "projectUniqueName": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
       "projectName": "InterviewDemo.Test",
-      "projectPath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
-      "packagesPath": "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\",
-      "outputPath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo.Test\\obj\\",
+      "projectPath": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
+      "packagesPath": "C:\\Users\\sta11\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo.Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Anthony.Ornelas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sta11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1393,17 +1370,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.cudirect.com/nuget": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/cudirect/_packaging/Common/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/cudirect/_packaging/Shared/nuget/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {
-              "projectPath": "C:\\repo_sandbox\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj"
+            "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {
+              "projectPath": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj"
             }
           }
         }
@@ -1433,7 +1408,7 @@
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[17.8.0, )"
+            "version": "[17.11.0, )"
           },
           "coverlet.collector": {
             "target": "Package",
@@ -1456,16 +1431,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.cudirect.com/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  }
 }

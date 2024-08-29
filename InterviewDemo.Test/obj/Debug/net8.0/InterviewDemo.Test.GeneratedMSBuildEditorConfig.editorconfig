@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InterviewDemo.Test
-build_property.ProjectDir = C:\repo_sandbox\InterviewDemo\InterviewDemo.Test\
+build_property.ProjectDir = C:\Users\sta11\source\repos\InterviewDemo\InterviewDemo.Test\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

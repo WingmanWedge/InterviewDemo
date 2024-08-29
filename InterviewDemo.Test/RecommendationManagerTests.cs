@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+
 namespace InterviewDemo.Test
 {
     [TestClass]
@@ -14,7 +16,21 @@ namespace InterviewDemo.Test
         [TestMethod]
         public void GetRecommendations_ReturnsEmptyListIfUserIsNUll()
         {
-            Assert.Fail();
+            //Arrange
+            Moviegoer movieGoer = null;
+            ILogger logger = new TestLogger();
+            IMovieRepository movieRepository = new TestMovieRepository();
+            var recommendationManager = new RecommendationManager(logger, movieRepository);
+            var expectedResult = new List<Movie>();
+
+
+            //Act
+            var result = recommendationManager.GetRecommendations(null);
+            
+
+            //Assert
+            Assert.AreEqual(expectedResult.Count, result.Count);
+            
         }
 
         /// <summary>Every user, whether they have a viewing history or not,
@@ -22,7 +38,47 @@ namespace InterviewDemo.Test
         [TestMethod]
         public void GetRecommendations_AlwaysReturnsTheLatestFeature()
         {
-            Assert.Fail();
+            //Arrange
+            ILogger logger = new TestLogger();
+            var movieRepository = new TestMovieRepository();
+            var recommendationManager = new RecommendationManager(logger, movieRepository);
+            var movieList = new List<Movie>();
+            var sample1 = new Movie()
+            {
+                Name = "Star Wars",
+                Genre = "Sci Fi",
+                ReleaseDate = DateTime.Now,
+                Rating = MPAARating.PG13,
+                FeatureStartDate = DateTime.Parse("2024-07-01")
+            };
+            var sample2 = new Movie()
+            {
+                Name = "Star Wars2",
+                Genre = "Sci Fi",
+                ReleaseDate = DateTime.Now,
+                Rating = MPAARating.PG13,
+                FeatureStartDate = DateTime.Parse("2024-08-01")
+            };
+
+            var movieGoer = new Moviegoer()
+            {
+                Name = "Ronald",
+                BirthDate = DateTime.Now,
+                ViewingHistory = null
+            };
+
+            movieList.Add(sample1);
+            movieList.Add(sample2);
+
+
+            //Act
+            movieRepository.AddMovie(movieList);
+            var result = recommendationManager.GetRecommendations(movieGoer);
+
+            //Assert
+            Assert.AreEqual(sample2.Name, result.First().Name);
+
+
         }
 
         /// <summary>For the rest of the movie recommendations,

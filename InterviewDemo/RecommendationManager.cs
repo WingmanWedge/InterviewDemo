@@ -24,8 +24,24 @@ namespace InterviewDemo
 
         public List<Movie> GetRecommendations(Moviegoer? user)
         {
-            throw new NotImplementedException();
-        }        
+            var result = new List<Movie>();
+
+            if (user == null)
+            {
+                return result;
+            }
+
+            var latest = GetLatestFeaturedMovie(_movieRepository.GetActive());
+
+            result.Add(latest);
+       
+            return result;
+        }
+        
+        private Movie GetLatestFeaturedMovie(List<Movie> movies)
+        {
+            return movies.OrderByDescending(x => x.FeatureStartDate).FirstOrDefault();
+        }
     }
 }
 
