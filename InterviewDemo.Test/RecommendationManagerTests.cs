@@ -5,10 +5,17 @@ namespace InterviewDemo.Test
     [TestClass]
     public class RecommendationManagerTests
     {
+        ILogger _logger;
+        TestMovieRepository _movieRepository;
+        RecommendationManager _manager;
 
         [TestInitialize]
         public void Init()
         {
+            _logger = new TestLogger();
+            _movieRepository = new TestMovieRepository();
+            _manager = new RecommendationManager( _logger, _movieRepository);
+
         }
 
         /// <summary>The user parameter can be null.
@@ -18,16 +25,11 @@ namespace InterviewDemo.Test
         {
             //Arrange
             Moviegoer movieGoer = null;
-            ILogger logger = new TestLogger();
-            IMovieRepository movieRepository = new TestMovieRepository();
-            var recommendationManager = new RecommendationManager(logger, movieRepository);
             var expectedResult = new List<Movie>();
 
-
             //Act
-            var result = recommendationManager.GetRecommendations(null);
+            var result = _manager.GetRecommendations(null);
             
-
             //Assert
             Assert.AreEqual(expectedResult.Count, result.Count);
             
@@ -39,45 +41,15 @@ namespace InterviewDemo.Test
         public void GetRecommendations_AlwaysReturnsTheLatestFeature()
         {
             //Arrange
-            ILogger logger = new TestLogger();
-            var movieRepository = new TestMovieRepository();
-            var recommendationManager = new RecommendationManager(logger, movieRepository);
-            var movieList = new List<Movie>();
-            var sample1 = new Movie()
-            {
-                Name = "Star Wars",
-                Genre = "Sci Fi",
-                ReleaseDate = DateTime.Now,
-                Rating = MPAARating.PG13,
-                FeatureStartDate = DateTime.Parse("2024-07-01")
-            };
-            var sample2 = new Movie()
-            {
-                Name = "Star Wars2",
-                Genre = "Sci Fi",
-                ReleaseDate = DateTime.Now,
-                Rating = MPAARating.PG13,
-                FeatureStartDate = DateTime.Parse("2024-08-01")
-            };
-
-            var movieGoer = new Moviegoer()
-            {
-                Name = "Ronald",
-                BirthDate = DateTime.Now,
-                ViewingHistory = null
-            };
-
-            movieList.Add(sample1);
-            movieList.Add(sample2);
-
+            var movieList = _movieRepository.GetMoviesSample();
+            var movieGoer = _movieRepository.GetMoviegoer();
 
             //Act
-            movieRepository.AddMovie(movieList);
-            var result = recommendationManager.GetRecommendations(movieGoer);
+            _movieRepository.AddMovie(movieList);
+            var result = _manager.GetRecommendations(movieGoer);
 
             //Assert
-            Assert.AreEqual(sample2.Name, result.First().Name);
-
+            Assert.AreEqual(movieList.Select(x => x.Name = "Star Wars2").First(), result.First().Name);
 
         }
 

@@ -25,5 +25,52 @@ namespace InterviewDemo.Test
         {
             _movieList.AddRange(movies);
         }
+
+        public List<Movie> GetMoviesSample()
+        {
+            var movieList = new List<Movie>();
+            var sample1 = new Movie()
+            {
+                Name = "Star Wars",
+                Genre = "Sci Fi",
+                ReleaseDate = DateTime.Now,
+                Rating = MPAARating.PG13,
+                FeatureStartDate = DateTime.Parse("2024-07-01")
+            };
+            var sample2 = new Movie()
+            {
+                Name = "Star Wars2",
+                Genre = "Sci Fi",
+                ReleaseDate = DateTime.Now,
+                Rating = MPAARating.PG13,
+                FeatureStartDate = DateTime.Parse("2024-08-01")
+            };
+
+            var movieGoer = new Moviegoer()
+            {
+                Name = "Ronald",
+                BirthDate = DateTime.Now,
+                ViewingHistory = null
+            };
+
+            movieList.Add(sample1);
+            movieList.Add(sample2);
+
+            return movieList;
+        }
+
+        public Moviegoer GetMoviegoer()
+        {
+            var movieGoer = new Moviegoer()
+            {
+                Name = "Ronald",
+                BirthDate = DateTime.Now,
+                ViewingHistory = null
+            };
+
+            return movieGoer;
+
+        }
+
     }
 }
