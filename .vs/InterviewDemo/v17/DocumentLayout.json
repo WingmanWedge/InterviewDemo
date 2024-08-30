@@ -15,20 +15,20 @@
       "RelativeMoniker": "D:0:0:{2407BFE8-F629-415E-948B-3C85438AC6A7}|InterviewDemo.Test\\InterviewDemo.Test.csproj|solutionrelative:interviewdemo.test\\testmovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|solutionrelative:interviewdemo\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|solutionrelative:interviewdemo\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo\\moviegoer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|solutionrelative:interviewdemo\\moviegoer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo\\mpaarating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|solutionrelative:interviewdemo\\mpaarating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|solutionrelative:interviewdemo\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|solutionrelative:interviewdemo\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo\\mpaarating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{850B7C34-4354-4F54-B42A-48FC3B158534}|InterviewDemo\\InterviewDemo.csproj|solutionrelative:interviewdemo\\mpaarating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2407BFE8-F629-415E-948B-3C85438AC6A7}|InterviewDemo.Test\\InterviewDemo.Test.csproj|c:\\users\\sta11\\source\\repos\\interviewdemo\\interviewdemo.test\\testlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,8 +41,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 264,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 268,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -52,14 +52,14 @@
               "RelativeDocumentMoniker": "InterviewDemo.Test\\TestMovieRepository.cs",
               "ToolTip": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo.Test\\TestMovieRepository.cs",
               "RelativeToolTip": "InterviewDemo.Test\\TestMovieRepository.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAwCkAAAAYAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-29T22:56:52.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IMovieRepository.cs",
               "DocumentMoniker": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\IMovieRepository.cs",
               "RelativeDocumentMoniker": "InterviewDemo\\IMovieRepository.cs",
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MPAARating.cs",
               "DocumentMoniker": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\MPAARating.cs",
               "RelativeDocumentMoniker": "InterviewDemo\\MPAARating.cs",
@@ -85,26 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Moviegoer.cs",
-              "DocumentMoniker": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\Moviegoer.cs",
-              "RelativeDocumentMoniker": "InterviewDemo\\Moviegoer.cs",
-              "ToolTip": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\Moviegoer.cs",
-              "RelativeToolTip": "InterviewDemo\\Moviegoer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T22:42:29.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "RecommendationManager.cs",
               "DocumentMoniker": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\RecommendationManager.cs",
               "RelativeDocumentMoniker": "InterviewDemo\\RecommendationManager.cs",
               "ToolTip": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\RecommendationManager.cs",
               "RelativeToolTip": "InterviewDemo\\RecommendationManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAIAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-29T22:41:24.487Z",
               "EditorCaption": ""
@@ -117,7 +104,7 @@
               "RelativeDocumentMoniker": "InterviewDemo.Test\\RecommendationManagerTests.cs",
               "ToolTip": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo.Test\\RecommendationManagerTests.cs",
               "RelativeToolTip": "InterviewDemo.Test\\RecommendationManagerTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAIAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowEcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-29T22:44:24.705Z",
               "EditorCaption": ""
@@ -138,12 +125,12 @@
           ]
         },
         {
-          "DockedWidth": 136,
+          "DockedWidth": 132,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Movie.cs",
               "DocumentMoniker": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\Movie.cs",
               "RelativeDocumentMoniker": "InterviewDemo\\Movie.cs",
@@ -152,6 +139,19 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-29T22:42:06.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Moviegoer.cs",
+              "DocumentMoniker": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\Moviegoer.cs",
+              "RelativeDocumentMoniker": "InterviewDemo\\Moviegoer.cs",
+              "ToolTip": "C:\\Users\\sta11\\source\\repos\\InterviewDemo\\InterviewDemo\\Moviegoer.cs",
+              "RelativeToolTip": "InterviewDemo\\Moviegoer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T22:42:29.446Z",
               "EditorCaption": ""
             }
           ]

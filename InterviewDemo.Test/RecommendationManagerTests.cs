@@ -58,7 +58,17 @@ namespace InterviewDemo.Test
         [TestMethod]
         public void GetRecommendations_OnlyIncludesIfGenreWasVeiwed()
         {
-            Assert.Fail();
+            //Arrange
+            var movieList = _movieRepository.GetMoviesSample();
+            var movieGoer = _movieRepository.GetNullMoviegoer();
+            var expectedResult = new List<Movie>();
+
+            //Act
+            _movieRepository.AddMovie(movieList);
+            var result = _manager.GetRecommendations(movieGoer);
+
+            //Assert
+            Assert.AreEqual(expectedResult.Count, result.Count);
         }
 
         /// <summary>No movie should be recommended more than once.</summary>

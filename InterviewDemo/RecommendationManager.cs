@@ -30,6 +30,10 @@ namespace InterviewDemo
             {
                 return result;
             }
+            if (user.ViewingHistory == null)
+            {
+                return result;
+            }
 
             var latest = GetLatestFeaturedMovie(_movieRepository.GetActive());
 

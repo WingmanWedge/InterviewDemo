@@ -61,6 +61,31 @@ namespace InterviewDemo.Test
 
         public Moviegoer GetMoviegoer()
         {
+            var sample3 = new Movie()
+            {
+                Name = "Star Wars3",
+                Genre = "Sci Fi",
+                ReleaseDate = DateTime.Now,
+                Rating = MPAARating.PG13,
+                FeatureStartDate = DateTime.Parse("2024-07-01")
+            };
+
+            var movieList = new List<Movie>();
+            movieList.Add(sample3);
+
+            var movieGoer = new Moviegoer()
+            {
+                Name = "Ronald",
+                BirthDate = DateTime.Now,
+                ViewingHistory = movieList
+            };
+
+            return movieGoer;
+
+        }
+
+        public Moviegoer GetNullMoviegoer()
+        {
             var movieGoer = new Moviegoer()
             {
                 Name = "Ronald",
