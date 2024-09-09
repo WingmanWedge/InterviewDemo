@@ -1,12 +1,19 @@
+
+using Microsoft.Extensions.Logging;
+using Moq;
+
 namespace InterviewDemo.Test
 {
     [TestClass]
     public class RecommendationManagerTests
     {
-
+        Mock<ILogger> mockLogger = new Mock<ILogger>();
+        Mock<IMovieRepository> mockMovieRepository = new Mock<IMovieRepository>();
         [TestInitialize]
         public void Init()
         {
+
+
         }
 
         /// <summary>The user parameter can be null.
@@ -14,13 +21,54 @@ namespace InterviewDemo.Test
         [TestMethod]
         public void GetRecommendations_ReturnsEmptyListIfUserIsNUll()
         {
-            Assert.Fail();
+            // Arrange
+
+            var recommendationManager = new RecommendationManager(mockLogger.Object, mockMovieRepository.Object);
+
+            // Act
+            List<Movie> result = recommendationManager.GetRecommendations(null);
+
+            // Assert
+            Assert.AreEqual(result.Count, 0);
+           
         }
 
         /// <summary>Every user, whether they have a viewing history or not,
         /// will always be recommended the most recent featured movie.</summary>
         [TestMethod]
         public void GetRecommendations_AlwaysReturnsTheLatestFeature()
+        {
+            var movies = new List<Movie>
+        {
+            new() { Genre="comedy", Name="Robert", Rating=MPAARating.G, FeatureStartDate = DateTime.Now.AddDays(1), ReleaseDate=DateTime.Now.AddDays(1) },
+            new() { Genre="comedy", Name="AAA", Rating=MPAARating.G, FeatureStartDate = DateTime.Now.AddDays(1), ReleaseDate=DateTime.Now },
+            new() {Genre = "comedy", Name = "Inter", Rating = MPAARating.G, FeatureStartDate = DateTime.Now.AddDays(2), ReleaseDate=DateTime.Now.AddDays(1)}
+        };
+
+            mockMovieRepository.Setup(repo => repo.GetActive()).Returns(movies);
+
+            var recommendationManager = new RecommendationManager(mockLogger.Object, mockMovieRepository.Object);
+
+            // Act
+            var result = recommendationManager.GetRecommendations(new Moviegoer { BirthDate = DateTime.Now, Name = "Somone" });
+
+            // Assert
+            var topDate = DateTime.Now.AddDays(1).Date;
+            var expectedMovies = movies.Where(movie => movie.FeatureStartDate.GetValueOrDefault().Date == topDate.Date).ToList();
+
+            Assert.AreEqual(expectedMovies.Count, result.Count);
+            foreach (var expectedMovie in expectedMovies)
+            {
+                Assert.IsTrue(result.Any(movie => movie.Name == expectedMovie.Name), $"Expected movie with name {expectedMovie.Name} not found.");
+            }
+        }
+
+        public void GetRecommendations_OnlyFeatureMovies_When_ViewingHistory_Empty()
+        {
+            Assert.Fail();
+        }
+
+        public void GetRecommendations_ExcludeViewingHistoryMovies_When_ViewingHistory_ContainsData()
         {
             Assert.Fail();
         }
@@ -30,7 +78,38 @@ namespace InterviewDemo.Test
         [TestMethod]
         public void GetRecommendations_OnlyIncludesIfGenreWasVeiwed()
         {
-            Assert.Fail();
+            var movies = new List<Movie>
+        {
+            new() { Genre="comedy", Name="Robert", Rating=MPAARating.G, FeatureStartDate = DateTime.Now.AddDays(-5), ReleaseDate=DateTime.Now.AddDays(1) },
+            new() { Genre="comedy", Name="AAA", Rating=MPAARating.G, FeatureStartDate = DateTime.Now.AddDays(-10), ReleaseDate=DateTime.Now },
+            new() {Genre = "documentation", Name = "Inter", Rating = MPAARating.G, FeatureStartDate = DateTime.Now.AddDays(2), ReleaseDate=DateTime.Now.AddDays(1)},
+        new() {Genre = "documentation", Name = "xMan", Rating = MPAARating.G, FeatureStartDate = DateTime.Now.AddDays(-100), ReleaseDate=DateTime.Now.AddDays(1)}
+
+            };
+
+            var movieGoer = new Moviegoer
+            {
+                BirthDate = DateTime.Now,
+                Name = "Somone",
+                ViewingHistory = new List<Movie> {
+                    new() {Genre="comedy", Name="Welcome", Rating=MPAARating.PG, ReleaseDate=DateTime.Now}
+                }
+            };
+
+            mockMovieRepository.Setup(repo => repo.GetActive()).Returns(movies);
+
+            var recommendationManager = new RecommendationManager(mockLogger.Object, mockMovieRepository.Object);
+
+            // Act
+            var result = recommendationManager.GetRecommendations(movieGoer);
+
+            Assert.AreEqual(result.Count, 3);
+            var expectedMovies = movies.Where(x => x.Name != "xMan").ToList();
+
+            foreach (var expectedMovie in expectedMovies)
+            {
+                Assert.IsTrue(result.Any(movie => movie.Name == expectedMovie.Name), $"Expected movie with name {expectedMovie.Name} not found.");
+            }
         }
 
         /// <summary>No movie should be recommended more than once.</summary>

@@ -10,6 +10,7 @@ namespace InterviewDemo
     public class Movie
     {
         public required string Name { get; set; }
+        // comedy, action, documentry.
         public required string Genre { get; set; }
         public required DateTime ReleaseDate { get; set; }
         public required MPAARating Rating { get; set; }

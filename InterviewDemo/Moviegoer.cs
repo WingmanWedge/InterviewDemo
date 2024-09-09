@@ -10,6 +10,8 @@ namespace InterviewDemo
     {
         public required string Name { get; set; }
         public required DateTime BirthDate { get; set; }
+
+        // comedy, action
         public List<Movie>? ViewingHistory { get; set; }
     }
 }
