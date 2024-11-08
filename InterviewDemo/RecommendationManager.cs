@@ -24,18 +24,7 @@ namespace InterviewDemo
 
         public List<Movie> GetRecommendations(Moviegoer? user)
         {
-            var result = new List<Movie>();
-            //throw new NotImplementedException();
-            if (user==null)
-            {
-                // throw null arg ex
-                return result;
-            }
-
-            // load data
-
-            return result;
-
+            throw new NotImplementedException();
         }        
     }
 }

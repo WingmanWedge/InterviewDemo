@@ -11,8 +11,8 @@ namespace InterviewDemo
     /// </summary>
     public enum MPAARating
     {
-        G=0,
-        PG, // 1
+        G,
+        PG,
         PG13 = 13,
         R = 17,
         NC17 = 18

@@ -13,8 +13,6 @@ namespace InterviewDemo
         public required string Genre { get; set; }
         public required DateTime ReleaseDate { get; set; }
         public required MPAARating Rating { get; set; }
-
-        // feature: advertising the movie to other users
         /// <summary>if a movie is featured, this will be populated</summary>
         public DateTime? FeatureStartDate { get; set; }
     }    

@@ -1,33 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/InterviewDemo.Test.csproj": {}
+    "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj": {}
   },
   "projects": {
-    "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/InterviewDemo.Test.csproj": {
+    "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/InterviewDemo.Test.csproj",
+        "projectUniqueName": "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
         "projectName": "InterviewDemo.Test",
-        "projectPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/InterviewDemo.Test.csproj",
-        "packagesPath": "/Users/abe/.nuget/packages/",
-        "outputPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/obj/",
+        "projectPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
+        "packagesPath": "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\",
+        "outputPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/abe/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Anthony.Ornelas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.cudirect.com/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/cudirect/_packaging/Common/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/cudirect/_packaging/Shared/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/InterviewDemo.csproj": {
-                "projectPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/InterviewDemo.csproj"
+              "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {
+                "projectPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj"
               }
             }
           }
@@ -36,6 +41,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -75,27 +85,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/InterviewDemo.csproj": {
+    "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/InterviewDemo.csproj",
+        "projectUniqueName": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
         "projectName": "InterviewDemo",
-        "projectPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/InterviewDemo.csproj",
-        "packagesPath": "/Users/abe/.nuget/packages/",
-        "outputPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/obj/",
+        "projectPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj",
+        "packagesPath": "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\",
+        "outputPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/abe/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Anthony.Ornelas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.cudirect.com/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/cudirect/_packaging/Common/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/cudirect/_packaging/Shared/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -107,6 +122,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -134,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

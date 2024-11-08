@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterviewDemo
 {
-    public class Moviegoer
+    public  class Moviegoer
     {
         public required string Name { get; set; }
         public required DateTime BirthDate { get; set; }
