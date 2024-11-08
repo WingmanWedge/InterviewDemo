@@ -1373,37 +1373,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\": {}
+    "/Users/abe/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
+      "projectUniqueName": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/InterviewDemo.Test.csproj",
       "projectName": "InterviewDemo.Test",
-      "projectPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\InterviewDemo.Test.csproj",
-      "packagesPath": "C:\\Users\\Anthony.Ornelas\\.nuget\\packages\\",
-      "outputPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo.Test\\obj\\",
+      "projectPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/InterviewDemo.Test.csproj",
+      "packagesPath": "/Users/abe/.nuget/packages/",
+      "outputPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Anthony.Ornelas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/abe/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.cudirect.com/nuget": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/cudirect/_packaging/Common/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/cudirect/_packaging/Shared/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj": {
-              "projectPath": "C:\\repo_github\\InterviewDemo\\InterviewDemo\\InterviewDemo.csproj"
+            "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/InterviewDemo.csproj": {
+              "projectPath": "/Users/abe/src/DotNet/InterviewDemo/InterviewDemo/InterviewDemo.csproj"
             }
           }
         }
@@ -1412,11 +1407,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1456,16 +1446,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.cudirect.com/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  }
 }
