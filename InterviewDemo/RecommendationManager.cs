@@ -12,8 +12,7 @@ namespace InterviewDemo
     public class RecommendationManager
     {
         private readonly ILogger _logger;
-        private IMovieRepository _movieRepository;
-
+        private readonly IMovieRepository _movieRepository;
 
         public RecommendationManager(ILogger logger
             , IMovieRepository movieRepository)
@@ -28,6 +27,3 @@ namespace InterviewDemo
         }        
     }
 }
-
-
-
