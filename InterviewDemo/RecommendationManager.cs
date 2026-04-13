@@ -23,7 +23,10 @@ namespace InterviewDemo
 
         public List<Movie> GetRecommendations(Moviegoer? user)
         {
-            throw new NotImplementedException();
+            List<Movie> movies = new List<Movie>();
+            if(user == null) return movies;
+
+            
         }        
     }
 }
