@@ -26,7 +26,31 @@ namespace InterviewDemo
             List<Movie> movies = new List<Movie>();
             if(user == null) return movies;
 
+            movies.Add(GetRecentFeature());
             
-        }        
+            if(user.ViewingHistory == null)
+            {
+                return movies;
+            }
+
+            movies.concat(GetMoviesBasedOnGenres(user));
+            
+        
+        }   
+
+       
+
+        private List<Movie> GetMoviesBasedOnGenres(MovieGoer user){
+            List<string> genres = user.ViewingHistory.Select(x=>x.Genre).Distinct();
+            return this._movieRepository.GetActive().Where(x => genres.Contains(x.Genre));
+        }
+
+        private Movie GetRecentFeature(){
+            return this._movieRepository.GetActive()
+                .Where(x => x.FeatureStartDate != null)
+                .OrderByDescending(x=>x.FeatureStartDate)
+                .FirstOrDefault();
+        }
+            
     }
 }
