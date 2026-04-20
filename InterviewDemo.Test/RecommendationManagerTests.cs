@@ -64,6 +64,35 @@ namespace InterviewDemo.Test
             Assert.AreEqual(TestMovies.LatestFeature, result[0]);
         }
 
+        // NEW
+        /// <summary>A user with no viewing history should receive only the latest featured movie,
+        /// since genre-based recommendations require prior viewing history.</summary>
+        [TestMethod]
+        public void GetRecommendations_ReturnsOnlyLatestFeature_WhenUserHasNoHistory()
+        {
+            _repo.Movies = TestMovies.All;
+            var user = TestUsers.AdultNoHistory;
+
+            var result = _sut.GetRecommendations(user);
+
+            Assert.AreEqual(1, result.Count);
+            Assert.AreEqual(TestMovies.LatestFeature, result[0]);
+        }
+
+        // NEW
+        /// <summary>When the repo contains no featured movies, the result should be empty
+        /// since there is no latest feature to anchor the list.</summary>
+        [TestMethod]
+        public void GetRecommendations_ReturnsEmpty_WhenNoFeaturedMovies()
+        {
+            _repo.Movies = [TestMovies.SciFiNonFeature, TestMovies.DramaNonFeature];
+            var user = TestUsers.AdultNoHistory;
+
+            var result = _sut.GetRecommendations(user);
+
+            Assert.AreEqual(0, result.Count);
+        }
+
         /// <summary>For the rest of the movie recommendations,
         /// we want to only include them if the user has a history of viewing that genre.</summary>
         [TestMethod]
@@ -75,14 +104,20 @@ namespace InterviewDemo.Test
 
             var result = _sut.GetRecommendations(user);
 
-            Assert.Fail();
+            Assert.IsTrue(result.Skip(1).All(m => genres.Contains(m.Genre)));
         }
 
         /// <summary>No movie should be recommended more than once.</summary>
         [TestMethod]
         public void GetRecommendations_NeverReturnsDuplicates()
         {
-            Assert.Fail();
+            // AdultWithHistory viewed Sci-Fi, which is also LatestFeature's genre — prime duplicate candidate
+            _repo.Movies = TestMovies.All;
+            var user = TestUsers.AdultWithHistory;
+
+            var result = _sut.GetRecommendations(user);
+
+            Assert.AreEqual(result.Distinct().Count(), result.Count);
         }
 
         /// <summary>MPAA ratings are an enumerator whose index doubles as the minimum age a movigoer should be to be recommended that movie.
@@ -91,14 +126,53 @@ namespace InterviewDemo.Test
         [TestMethod]
         public void GetRecommendations_NeverRecommendsInapproriateAgeRatings()
         {
-            Assert.Fail();
+            // TeenWithHistory (born 2011-08-03) is ~14 — old enough for PG13 but not R or NC17
+            _repo.Movies = TestMovies.All;
+            var user = TestUsers.TeenWithHistory;
+            int age = (int)((DateTime.Today - user.BirthDate).TotalDays / 365.25);
+
+            var result = _sut.GetRecommendations(user);
+
+            Assert.IsTrue(result.All(m => (int)m.Rating <= age));
         }
 
-        /// <summary>errors should produce logs. Each step we perform should produce info level logs</summary>
+        // NEW
+        /// <summary>Age-appropriate genre movies must appear in the result, confirming the age filter
+        /// excludes only ineligible movies rather than filtering out everything.</summary>
         [TestMethod]
-        public void GetRecommendations_LogsErrorAndInfo()
+        public void GetRecommendations_IncludesAgeAppropriateGenreMovies()
         {
-            Assert.Fail();
+            // TeenWithHistory viewed Comedy (FamilyMovie, rated G) — should appear in results
+            _repo.Movies = TestMovies.All;
+            var user = TestUsers.TeenWithHistory;
+
+            var result = _sut.GetRecommendations(user);
+
+            Assert.IsTrue(result.Contains(TestMovies.FamilyMovie));
+        }
+
+        // NEW
+        /// <summary>Each step of a successful recommendation run should produce at least one info-level log.</summary>
+        [TestMethod]
+        public void GetRecommendations_LogsInfo_OnSuccess()
+        {
+            _repo.Movies = TestMovies.All;
+            var user = TestUsers.AdultWithHistory;
+
+            _sut.GetRecommendations(user);
+
+            Assert.IsTrue(_logger.Logs.Any(l => l.Level == LogLevel.Information));
+        }
+
+        // NEW
+        /// <summary>When a null user is passed, an error-level log should be produced
+        /// so that callers can diagnose unexpected null references in production.</summary>
+        [TestMethod]
+        public void GetRecommendations_LogsError_WhenUserIsNull()
+        {
+            _sut.GetRecommendations(null);
+
+            Assert.IsTrue(_logger.Logs.Any(l => l.Level == LogLevel.Error));
         }
     }
 }
