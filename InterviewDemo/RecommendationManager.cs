@@ -23,7 +23,24 @@ namespace InterviewDemo
 
         public List<Movie> GetRecommendations(Moviegoer? user)
         {
-            throw new NotImplementedException();
-        }        
+            var result = new List<Movie>();
+            if (user == null) return result;
+
+
+            //adding latest feature
+            result = _movieRepository.GetActive();
+            var latest = result.OrderByDescending(m => m.FeatureStartDate).FirstOrDefault();
+            result.Add(latest);
+
+            //get all types of movies
+            var genres = user.ViewingHistory.Select(m => m.Genre).ToHashSet();
+
+            //filter out all list
+            var genreMovies = _movieRepository.GetActive().Where(m => genres.Contains(m.Genre)).ToList<Movie>();
+            result.AddRange(genreMovies);
+
+
+            return result;
+        }
     }
 }
