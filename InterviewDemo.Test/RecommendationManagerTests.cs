@@ -1,3 +1,7 @@
+using Microsoft.Extensions.Logging;
+using NSubstitute;
+using InterviewDemo;
+
 namespace InterviewDemo.Test
 {
     [TestClass]
@@ -7,14 +11,24 @@ namespace InterviewDemo.Test
         [TestInitialize]
         public void Init()
         {
+            _logger = Substitute.For<ILogger>();
+            _movieRepository = Substitute.For<IMovieRepository>();
         }
+
+        private ILogger _logger;
+        private IMovieRepository _movieRepository;
 
         /// <summary>The user parameter can be null.
         /// When this is the case we want to return an empty list.</summary>
         [TestMethod]
         public void GetRecommendations_ReturnsEmptyListIfUserIsNUll()
         {
-            Assert.Fail();
+            //arrange
+            var stuRec = new RecommendationManager(_logger, _movieRepository);
+
+            //act
+            Assert.AreEqual(0, stuRec.GetRecommendations(null).Count);            
+
         }
 
         /// <summary>Every user, whether they have a viewing history or not,

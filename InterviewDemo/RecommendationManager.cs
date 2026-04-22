@@ -23,7 +23,20 @@ namespace InterviewDemo
 
         public List<Movie> GetRecommendations(Moviegoer? user)
         {
-            throw new NotImplementedException();
+            var movies = new List<Movie>();
+
+            if (user == null)
+            {
+             
+                _logger.LogInformation("User was null, returning empty list");
+                return movies;
+            }
+            else
+            {
+
+            }
+
+            return movies;
         }        
     }
 }
